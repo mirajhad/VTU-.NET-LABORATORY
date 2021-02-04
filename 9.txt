@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace nine
+{
+    public class PropertyClass
+    {
+        private string name;
+        private int age;
+
+        public string p_name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+
+        }
+        public int p_age
+        {
+            get
+            {
+                return age;
+            }
+            set
+            {
+                age = value;
+            }
+
+        }
+
+        public class MainClass
+        {
+            static void Main(string[] args)
+            {
+                PropertyClass ob1 = new PropertyClass();
+                ob1.p_name = "Peter";
+                Console.WriteLine(ob1.p_name);
+                PropertyClass ob2 = new PropertyClass();
+                ob2.p_age = 30;
+                Console.WriteLine(ob2.p_age);
+
+                Console.ReadLine();
+            }
+        }
+
+    }
+}
+

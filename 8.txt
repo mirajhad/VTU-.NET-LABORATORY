@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace eight
+{
+    abstract public class MotorVehicle
+    {
+        public string make;
+        public string model;
+
+        public MotorVehicle(string make, string model)
+        {
+            this.make = make;
+            this.model = model;
+        }
+        abstract public void Accelerate();
+    }
+
+    public class Product : MotorVehicle
+    {
+        public Product(string make, string model) :
+            base(make, model)
+        {
+            // do nothing
+        }
+        public override void Accelerate()
+        {
+            Console.WriteLine("In Product Accelerate() method");
+            Console.WriteLine(model + " accelerating");
+        }
+    }
+
+    class Prog8
+    {
+        public static void Main()
+        {
+            Product myProduct = new Product("Toyota", "MR2");
+            myProduct.Accelerate();
+            Console.ReadLine();
+        }
+    }
+
+}
+

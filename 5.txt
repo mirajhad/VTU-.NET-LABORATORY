@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace program
+{
+    public class five
+    {
+        public static void Main()
+        {
+            try
+            {
+                int[] array = new int[100];
+                array[0] = 1;
+                array[10] = 2;
+                array[200] = 3;
+                Console.WriteLine("Thisline will never be excecuted");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                // code that does any cleaning up
+                Console.WriteLine("In finally block: do any cleaning up here");
+                Console.ReadKey();
+            }
+
+        }
+    }
+}

@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PROGRAM2
+{
+    class Program
+    {
+
+        //  FIND BOXING AND UNBOXING   
+        static void Main(string[] args)
+        {
+            /*
+            // assigned int value 
+            // 23 to num 
+            int num = 23;
+
+            // boxing 
+            object obj = num;
+
+            // unboxing 
+            int i = (int)obj;
+            int num1 = num;
+
+            // Display result 
+            Console.WriteLine("Value of ob object is : " + obj);
+            Console.WriteLine("Value of i is : " + i);
+            Console.WriteLine("Value of new num is : " + num1);
+            Console.ReadLine();*/
+
+            
+            int num = 123;
+            object obj = num;
+            try
+            {
+                int j = (short)obj;
+                System.Console.WriteLine("Unboxing{0}",+j);
+            }
+            catch (System.InvalidCastException e)
+            {
+                System.Console.WriteLine("{0} Error: Incorrect unboxing", e.Message);
+            }
+            System.Console.Read();
+
+        }
+    }
+}

@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace seven
+{
+    public delegate int Calculate(int value1, int value2);
+
+    class MyClass
+    {
+        public int add(int value1, int value2)
+        {
+            return value1 + value2;
+        }
+        //a method, that will be assigned to delegate objects must have
+        //the EXACT return type and parameter list of the delegate
+        public static int sub(int value1, int value2)
+        {
+            return value1 - value2;
+        }
+        static void Main()
+        {
+            MyClass obj = new MyClass();
+            Calculate del = obj.add;
+            Console.WriteLine("Adding two values: " + del(10, 6));
+            del = sub;
+            Console.WriteLine("Subtracting two values: " + del(10, 4));
+            Console.ReadKey();
+        }
+    }
+
+}
+

@@ -1,0 +1,42 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+interface Emp
+{
+    void EmpInfo();
+}
+class Employee : Emp
+{
+    string name;
+    int id;
+    public Employee(string name, int id)
+    {
+        this.name = name;
+        this.id = id;
+    }
+    public void EmpInfo()
+    {
+        Console.WriteLine("\nEmpName is {0}", name);
+        Console.WriteLine("\nEmpID is {0}", id);
+    }
+}
+public class Prog10
+{
+    public static void Main()
+    {
+        Emp[] emps = new Employee[3];
+        emps[0] = new Employee("Manoj", 10);
+        emps[1] = new Employee("Shailni", 20);
+        emps[2] = new Employee("Tanu", 30);
+        for (int i = 0; i < 3; i++)
+        {
+            emps[i].EmpInfo();
+        }
+
+        Console.ReadLine();
+    }
+}
+

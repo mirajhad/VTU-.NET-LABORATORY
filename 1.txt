@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace firstpro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // find sqrt of this number 
+            /*double var = 16;
+            double x = Math.Sqrt(var);
+            Console.WriteLine("MY SQUARE ROOT IS {0}",+x);
+            Console.ReadLine();*/
+
+            double a1=5, a2=6, a3=4;
+            double sum = a1 + a2 + a3;
+            Console.WriteLine("MY sum is  {0}", +sum);
+            double avg = sum/3;
+             Console.WriteLine("MY avg is  {0}", +avg);
+            Console.ReadLine();  
+
+
+        }
+    }
+}

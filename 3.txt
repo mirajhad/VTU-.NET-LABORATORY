@@ -1,0 +1,56 @@
+//C# Program to add complex numbers
+
+using System;
+class Complex
+{
+    public int real;
+    public int img;
+
+    public Complex()
+    {
+        this.real = 0;
+        this.img = 0;
+    }
+    public Complex(int real, int img)
+    {
+        this.real = real;
+        this.img = img;
+    }
+
+
+    public static Complex operator +(Complex Ob1, Complex Ob2)
+    {
+        Complex temp = new Complex();
+        temp.real = Ob1.real + Ob2.real;
+        temp.img = Ob1.img + Ob2.img;
+
+        return temp;
+    }
+
+    public void PrintComplexNumber()
+    {
+        Console.WriteLine("{0} + {1}i", real, img);
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Complex C1 = new Complex(5, 6);
+        Complex C2 = new Complex(7, 3);
+        Complex C3;
+
+        C3 = C1 + C2;
+
+        Console.Write("FIRST COMPLEX NUMBER C1 : ");
+        C1.PrintComplexNumber();
+
+        Console.Write("SECOND COMPLEX NUMBER  C2 : ");
+        C2.PrintComplexNumber();
+
+        Console.Write("TOTAL OF FIRST AND SECOND COMPLEX NUMBER C3 : ");
+        C3.PrintComplexNumber();
+        Console.ReadLine();
+    }
+}

@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace six
+{
+    public class Prog6
+    {
+        static void Main(string[] sree)
+        {
+            //The function called is based
+            //upon the type called by new.
+            B MyB = new C();
+            C MyC = new D();
+            D MyD = new D();
+            MyB.Display();    //Calls C Display
+            MyC.Display();    //Calls C Display
+            MyD.Display();    //Calls D Display
+            Console.ReadKey();
+        }
+    }
+    public interface A
+    {
+        void Display();
+    }
+    class B : A
+    {
+        public virtual void Display()
+        {
+            Console.WriteLine("Class B's Display Method");
+        }
+    }
+    class C : B
+    {
+        public override void Display()
+        {
+            Console.WriteLine("Class C's Display Method");
+        }
+    }
+    class D : C
+    {
+        public new void Display()
+        {
+            Console.WriteLine("Class D's Display Method");
+        }
+    }
+}
+
